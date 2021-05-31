@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>perfil</title>
+</head>
+<body>
+    <header id="header"class="header header-default">
+        <div class="header-perfil">
+            <h2 id="nombre-header" class="user">USUARIO</h2>
+            <img  src="./img/imagen-perfil.jpg" class="img-perfil" alt="">
+            <a id="btn-salir"href="./index.html">salir</a>
+        </div>
+        
+    </header>
+    <div class="div-config margen">
+        <img src="./img/configuracion.svg" id="ruedita-config"  class="icono-config"alt="">
+    </div>
+    <section id="form" class="section-form d-none">
+        <h2>configuraciones</h2>
+
+        <input type="text" id="nombre-form"  class="input" placeholder="nombre"></input>
+        <input type="text" id="apellido-form"  class="input" placeholder="apellidos"></input>
+        <select id="edad-form" class="input">
+            <option value="">edad</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+            <option value="32">32</option>
+            <option value="33">33</option>
+            <option value="34">34</option>
+            <option value="35">35</option>
+            <option value="36">36</option>
+            <option value="37">37</option>
+            <option value="38">38</option>
+            <option value="39">39</option>
+            <option value="40">40</option>
+            <option value="+40">mayor a 40</option>
+            
+
+        </select>
+    <input type="email" id="mail-form" class="input" placeholder="example@example.com">
+    <select class="input" id="nac-form">
+        <option value="">Nacionalidad</option>
+        <option value="Argentina">Argentina</option>
+        <option value="Chile">Chile</option>
+        <option value="Uruguay">Uruguay</option>
+        <option value="Peru">Peru</option>
+        <option value="USA">EEUU</option>
+        <option value="Canada">Canada</option>
+        <option value="Otro..">Otro</option>
+
+    </select>
+    <div class="background-style">
+        <button id="bg-photo" class="btn-bgphoto">imagen de fondo</button>
+        <button id="bg-default " class="bg-default">default</button>
+    </div>
+
+    <button id="btn-form" class="btn-form">Aplicar</button>
+
+    </section>
+
+
+    <script src="./js/perfil.js"></script>
+    <script src="./js/config.js"></script>
+    <section class="section-info contenedor">
+        <div id="info-perfil" class="info-perfil">
+            <p >Nombre: <span id="name"></span> </p>
+            <p >Apellido: <span id="surname"></span></p>
+            <p >edad:<span id="age"></span> </p>
+            <p >nacionalidad:<span id="nac"></span> </p>
+            <p id="email">Email: </p>
+        </div>
+        
+    </section>
+
+
+    
+
+    <script src="./js/perfil.js"></script>
+    <script src="./js/config.js"></script>
+</body>
+</html>

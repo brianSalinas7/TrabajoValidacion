@@ -14,23 +14,40 @@
         registro.addEventListener("blur",() =>{
             caracteresPermitidos = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
             console.log(registro.value)
-            if(registro.value!==caracteresPermitidos){
-                alertEmail.innerHTML="debes completar el campo"
-                alertEmail.classList.add("error-msg");
+            if(caracteresPermitidos.test(registro.value)){
+                
+                alertEmail.innerHTML="✅ email correcto";
+                alertEmail.classList.remove("error-msg");
+                alertEmail.style.color= "green";
             }else{
-                alertEmail=alertEmail;
+                alertEmail.innerHTML="❌ El campo debe contener `@` y `.com`"
+                alertEmail.classList.add("error-msg");
+                alertEmail.style.color= "red";
+                
             }
         })
         
         password1.addEventListener("blur", () =>{
             if(password1.value.length<12){
                 alertPass1.classList.add("error-msg");
+                alertPass1.style.color= "red";
+                alertPass1.innerHTML="❌ La contraseña no contiene mas de 12 caracteres";
+            }else{
+                alertPass1.innerHTML="✅ La contraseña es segura";
+                alertPass1.classList.remove("error-msg");
+                alertPass1.style.color= "green";
             }
         })
     
         password2.addEventListener("blur", ()=>{
             if(password2.value!==password1.value){
                 alertPass2.classList.add("error-msg");
+                alertPass2.style.color= "red";
+                alertPass2.innerHTML="❌ compruebe que las contraseñas sean iguales";
+            }else{
+                alertPass2.innerHTML="✅ Las contraseñas coinciden";
+                alertPass2.classList.remove("error-msg");
+                alertPass2.style.color= "green";
             }
         })
         
@@ -56,7 +73,7 @@
                 }else{
                     alertPass2.innerHTML="CONTRASEÑAS CONCIDEN";
                     alertPass2.classList.add("exito-msg");
-                    window.open("https://portfolio-bootstrap-dng.netlify.app/","_self");
+                    window.open("../perfil.html","_self");
                     
                 }
             }
