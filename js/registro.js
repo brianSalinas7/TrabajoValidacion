@@ -61,18 +61,19 @@
         caracteresPermitidos = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
         if(caracteresPermitidos.test(registro.value)){
             if(password1.value.length<12){
-                alertPass1.innerHTML="Error,La contraseña tiene que tener mas de 12 caracteres";
+                alertPass1.innerHTML="❌ La contraseña no contiene mas de 12 caracteres";
                 alertPass1.classList.add("error-msg");
                 
             }else{
                 alertPass1.innerHTML="Contraseña valida";
                 if(password2.value !== password1.value){
-                    alertPass2.innerHTML="Las contraseñas no coinciden";
+                    alertPass2.innerHTML="❌ compruebe que las contraseñas sean iguales";
                     alertPass2.classList.add("error-msg");
                     
                 }else{
-                    alertPass2.innerHTML="CONTRASEÑAS CONCIDEN";
-                    alertPass2.classList.add("exito-msg");
+                    alertPass2.innerHTML="✅ Las contraseñas coinciden";
+                    alertPass2.classList.remove("error-msg");
+                    alertPass2.style.color= "green";
                     window.open("../perfil.html","_self");
                     
                 }
